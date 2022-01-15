@@ -16060,6 +16060,12 @@ header {
   padding: 100px 8vw;
 }
 
+.cream-row {
+  background-color: #EFEBE0;
+  color: #154260;
+  padding: 100px 8vw;
+}
+
 .purple-row h1, .purple-row h2 {
   color: #EFEBE0;
 }

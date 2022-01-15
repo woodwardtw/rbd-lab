@@ -69,3 +69,40 @@ function rbd_home_projects(){
 	// Reset Post Data
 	wp_reset_postdata();
 }
+
+function rbd_home_news(){
+	$args = array(
+		'post_type' => array('post'),
+		'category_name' => 'news',
+		'posts_per_page' => 1,
+    	'nopaging' => true, 
+	);
+	$news_query = new WP_Query( $args );
+	//var_dump($the_query);
+
+	// The Loop
+	if ( $news_query->have_posts() ) :
+		while ( $news_query->have_posts() ) : $news_query->the_post();
+		// Do Stuff
+			$title = get_the_title();
+			$link = get_the_permalink();
+			$body = rbd_get_first_paragraph();
+			echo "<a class='project-link' href='{$link}'><h2>{$title}</h2></a>
+				<div class='author'></div>
+				<div class='home-article'>{$body}</div>		
+			";
+		endwhile;
+	endif;
+
+	// Reset Post Data
+	wp_reset_postdata();
+}
+
+
+function rbd_get_first_paragraph(){
+    global $post;
+    $str = wpautop( get_the_content() );
+    $str = substr( $str, 0, strpos( $str, '</p>' ) + 4 );
+    $str = strip_tags($str, '<a><strong><em>');
+    return '<p>' . $str . '</p>';
+}
