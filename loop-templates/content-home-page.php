@@ -13,14 +13,18 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php //the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 	<div class="entry-content">
+	<div class="row project purple-row projects">
+		<div class="project-list col-md-12">
+			<h1>Projects</h1>
 
+		</div>
+	</div>
 		<?php
 		the_content();
 		understrap_link_pages();

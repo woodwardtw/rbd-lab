@@ -16022,14 +16022,21 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-#page, #home-page-wrapper {
+#page {
   background-color: #EFEBE0;
 }
 
-.entry-title {
-  font-size: 3em;
+h1, h2, h3, h4 {
   color: #154260;
   font-weight: 800;
+}
+
+.entry-title, h1 {
+  font-size: 3em;
+}
+
+header {
+  padding-top: 50px;
 }
 
 #main-menu {
@@ -16041,6 +16048,27 @@ body {
   font-weight: 800;
   color: #154260;
   margin-left: 2.5vw;
+}
+
+.d-lion-logo {
+  max-width: 70px;
+}
+
+.purple-row {
+  background-color: #7C859A;
+  color: #EFEBE0;
+  padding: 100px 8vw;
+}
+
+.purple-row h1, .purple-row h2 {
+  color: #EFEBE0;
+}
+
+.projects {
+  background-image: url(../imgs/gear_puzzle.png);
+  background-position: 90% center;
+  background-size: 450px 450px;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=theme-bootstrap4.css.map */

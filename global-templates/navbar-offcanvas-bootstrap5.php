@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<!-- Your site title as branding in the menu -->
 
-		<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url">logo</a>
+		<a rel="home" class="d-lion-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><img src="<?php echo  get_template_directory_uri();?>/imgs/d-lion-logo.png" alt="Resilience by Design logo."></a>
 			
 		<!-- end custom logo -->
 

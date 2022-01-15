@@ -11,13 +11,12 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
-$container = "container";
 
 ?>
 
 <div class="wrapper" id="home-page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content">
+	<div class="container-fluid" id="content">
 
 		<div class="row">
 

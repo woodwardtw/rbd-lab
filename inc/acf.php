@@ -8,6 +8,14 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+//home page
+function rbd_home_project_text(){
+    if(get_field('project_text')){
+        $text = get_field('project_text');
+        return $text;
+    }
+}
+
 
 
     //save acf json
