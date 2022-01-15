@@ -11,11 +11,8 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
-$container = get_theme_mod( 'understrap_container_type' );
+$container = "container";
 
-if ( is_front_page() ) {
-	get_template_part( 'global-templates/hero' );
-}
 ?>
 
 <div class="wrapper" id="home-page-wrapper">

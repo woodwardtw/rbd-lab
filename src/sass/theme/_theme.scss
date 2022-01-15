@@ -1,9 +1,25 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+body {
+    font-family: 'Montserrat', sans-serif;
+}
 
 #page, #home-page-wrapper {
     background-color: $cream;
 }
 
 .entry-title {
-    background-color: red;
+    font-size: 3em;
+    color: $primary;
+    font-weight: 800;
+}
+
+#main-menu {
+    background-color: $cream;
+}
+
+#main-menu a {
+    font-size: 2.5vw;
+    font-weight: 800;
+    color: $primary;
+    margin-left: 2.5vw;
 }
