@@ -87,8 +87,10 @@ function rbd_home_news(){
 			$title = get_the_title();
 			$link = get_the_permalink();
 			$body = rbd_get_first_paragraph();
-			echo "<a class='project-link' href='{$link}'><h2>{$title}</h2></a>
-				<div class='author'></div>
+			$id = get_the_id();
+			$author =  get_the_author();
+			echo "<a class='news-link' href='{$link}'><h1>{$title}</h1></a>
+				<div class='news-author'>By {$author}</div>
 				<div class='home-article'>{$body}</div>		
 			";
 		endwhile;

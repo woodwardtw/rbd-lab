@@ -16105,6 +16105,34 @@ header {
 
 .see-more svg {
   width: 200px;
+  transition: all 0.3s ease;
+}
+
+.see-more:hover svg {
+  margin-left: 10px;
+}
+
+.see-more.orange:hover svg {
+  stroke: #154260;
+}
+
+.see-more.blue:hover svg {
+  stroke: #EE674D;
+}
+
+.news-link {
+  text-decoration: none;
+}
+
+.home-article {
+  margin: 20px 0 40px 100px;
+  font-size: 1.5vw;
+}
+
+.news-author {
+  font-size: 1.4vw;
+  font-weight: 600;
+  color: #7C859A;
 }
 
 /*# sourceMappingURL=theme-bootstrap4.css.map */

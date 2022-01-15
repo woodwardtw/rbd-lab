@@ -86,4 +86,32 @@ header {
 
 .see-more svg {
     width: 200px;
+    transition: all .3s ease;
+}
+
+.see-more:hover svg{
+    margin-left: 10px;
+}
+
+.see-more.orange:hover svg {
+    stroke: $primary;
+}
+
+.see-more.blue:hover svg {
+    stroke: $orange;
+}
+
+.news-link {
+    text-decoration: none;
+}
+
+.home-article {
+    margin: 20px 0 40px 100px;
+    font-size: 1.5vw;
+}
+
+.news-author {
+    font-size: 1.4vw;
+    font-weight: 600;
+    color: $purple;
 }

@@ -29,7 +29,7 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 		</div>
 		<div class="row news cream-row">
-			<div class="project-list col-md-8">				
+			<div class="col-md-8">				
 				<?php rbd_home_news();?>				
 				<div class="see-more orange">
 						<a href="news">See more news <?php get_template_part( 'loop-templates/content', 'right-arrow.svg' );?></a>
