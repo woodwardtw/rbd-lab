@@ -22,7 +22,10 @@ defined( 'ABSPATH' ) || exit;
 	<div class="row project purple-row projects">
 		<div class="project-list col-md-12">
 			<h1>Projects</h1>
-
+			<?php rbd_home_projects();?>
+			<div class="see-more blue">
+				<a href="projects">See more projects <?php get_template_part( 'loop-templates/content', 'right-arrow.svg' );?></a>
+			</div>
 		</div>
 	</div>
 		<?php

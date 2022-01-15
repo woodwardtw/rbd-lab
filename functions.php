@@ -27,6 +27,7 @@ $understrap_includes = array(
 	'/editor.php',                          // Load Editor functions.
 	'/block-editor.php',                    // Load Block Editor functions.
 	'/acf.php',								// Load ACF functions
+	'/custom-data.php',						// Load custom post types and taxonomy functions
 	'/deprecated.php',                      // Load deprecated functions.
 );
 
@@ -43,4 +44,28 @@ if ( class_exists( 'Jetpack' ) ) {
 // Include files.
 foreach ( $understrap_includes as $file ) {
 	require_once get_theme_file_path( $understrap_inc_dir . $file );
+}
+
+
+//HOME PAGE FUNCTIONS
+function rbd_home_projects(){
+	$args = array(
+		'post_type' => array('project'),
+		'posts_per_page' => 3,
+    	'nopaging' => true, 
+	);
+	$the_query = new WP_Query( $args );
+
+	// The Loop
+	if ( $the_query->have_posts() ) :
+	while ( $the_query->have_posts() ) : $the_query->the_post();
+	// Do Stuff
+		$title = get_the_title();
+		$link = get_the_permalink();
+		echo "<div class='home-project'><a class='project-link' href='{$link}'>{$title}</a></div>";
+	endwhile;
+	endif;
+
+	// Reset Post Data
+	wp_reset_postdata();
 }

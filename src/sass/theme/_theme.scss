@@ -9,7 +9,7 @@ body {
 
 h1, h2, h3, h4 {
     color: $primary;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .entry-title, h1 {
@@ -48,6 +48,36 @@ header {
 .projects {
     background-image: url(../imgs/gear_puzzle.png);
     background-position: 90% center;
-    background-size: 450px 450px;
+    background-size: 420px 420px;
     background-repeat: no-repeat;
+}
+
+.home-project .project-link  {
+    font-size: 2.2vw;
+    color: $cream;
+    font-weight: 600;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.see-more a{
+    font-size: 1.8vw;
+    font-weight: 600;
+    margin: 50px 0;
+    text-decoration: none;
+    display: block;
+}
+
+.see-more.blue, .see-more.blue svg {
+    color: $primary;
+    stroke: $primary;
+}
+
+.see-more.orange, .see-more.orange svg {
+    color: $orange;
+    stroke: $orange;
+}
+
+.see-more svg {
+    width: 200px;
 }
