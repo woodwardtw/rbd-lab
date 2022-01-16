@@ -17,7 +17,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+	<div class="container-fluid">
 
 		<div class="row">
 
@@ -25,11 +25,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<footer class="site-footer" id="colophon">
 
-					<div class="site-info">
-
-						<?php understrap_site_info(); ?>
-
-					</div><!-- .site-info -->
+				<div class="row">
+					<div class="col-md-5">
+						<h2>CONTACT US</h2>
+					</div>
+					<div class="col-md-7">
+						<?php get_search_form();?>
+					</div>
+				</div>
 
 				</footer><!-- #colophon -->
 

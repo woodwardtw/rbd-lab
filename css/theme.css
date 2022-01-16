@@ -17089,6 +17089,7 @@ figure.woocommerce-product-gallery__wrapper {
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: #EFEBE0;
 }
 
 #page {
@@ -17202,5 +17203,82 @@ header {
   font-size: 1.4vw;
   font-weight: 600;
   color: #7C859A;
+}
+
+/**
+ * Circle Styles
+ */
+.circle {
+  position: relative;
+  display: block;
+  margin: 2em 0;
+  background-color: transparent;
+  color: #222;
+  text-align: center;
+}
+
+.circle:after {
+  display: block;
+  padding-bottom: 100%;
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background-color: #ddd;
+  content: "";
+}
+
+.circle__inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.circle__wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.circle__content {
+  display: table-cell;
+  padding: 1em;
+  vertical-align: middle;
+}
+
+.circle__content a {
+  font-size: 4vw;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.circle__content a:after {
+  content: "";
+  background-image: url(../imgs/arrow-orange.svg);
+  width: 80%;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  opacity: 0;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.circle__content a:hover:after {
+  opacity: 1;
+  margin-left: 10px;
+}
+
+#wrapper-footer {
+  background-color: #EFEBE0;
+  padding: 80px 30px;
 }
 /*# sourceMappingURL=theme.css.map */

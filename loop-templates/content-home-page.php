@@ -39,11 +39,21 @@ defined( 'ABSPATH' ) || exit;
 					<img src="<?php echo  get_template_directory_uri();?>/imgs/news.svg" alt="News icon.">
 				</div>
 			</div>
-
+		</div>
+		<div class="row purple-row links">
+			<div class="col-md-4">
+				<?php echo rbd_circle_maker('Story','story')?>
+			</div>
+			<div class="col-md-4">
+				<?php echo rbd_circle_maker('Resources','resources')?>
+			</div>
+			<div class="col-md-4">
+				<?php echo rbd_circle_maker('Partners','partners')?>
+			</div>
 		</div>
 		<?php
-		the_content();
-		understrap_link_pages();
+		//the_content();
+		//understrap_link_pages();
 		?>
 
 	</div><!-- .entry-content -->

@@ -108,3 +108,16 @@ function rbd_get_first_paragraph(){
     $str = strip_tags($str, '<a><strong><em>');
     return '<p>' . $str . '</p>';
 }
+
+function rbd_circle_maker($title,$link){	
+	return "
+	<div class='circle'>
+		<div class='circle__inner'>
+	  		<div class='circle__wrapper'>	  			
+				<div class='circle__content'>
+					<a href='{$link}'>{$title}</a>
+				</div>				
+	  		</div>
+		</div>
+  </div>";
+}
