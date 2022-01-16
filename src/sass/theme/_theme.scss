@@ -192,3 +192,18 @@ header {
       background-color: $cream;
       padding: 80px 30px;
   }
+
+  //Projects page 
+.all-projects-row {
+    padding: 30px 60px;
+}
+
+.all-projects-row  .circle:after  {
+    background-color: $primary;
+}
+
+.all-projects-row .circle__content a{
+    line-height: 1.1em;
+    font-size: 2.5vw;
+    color: $cream;
+}

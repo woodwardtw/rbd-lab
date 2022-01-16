@@ -121,3 +121,28 @@ function rbd_circle_maker($title,$link){
 		</div>
   </div>";
 }
+
+
+//PROJECTS PAGE
+function rbd_all_projects(){
+	$args = array(
+		'post_type' => array('project'),
+		'posts_per_page' => -1,
+    	'nopaging' => true, 
+	);
+	$the_query = new WP_Query( $args );
+
+	// The Loop
+	if ( $the_query->have_posts() ) :
+	while ( $the_query->have_posts() ) : $the_query->the_post();
+	// Do Stuff
+		$title = get_the_title();
+		$link = get_the_permalink();
+		$html = '<div class="col-md-4">' . rbd_circle_maker($title,$link) . "</div>";
+		echo $html;
+	endwhile;
+	endif;
+
+	// Reset Post Data
+	wp_reset_postdata();
+}
