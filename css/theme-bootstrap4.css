@@ -16227,4 +16227,19 @@ header {
   color: #EFEBE0;
 }
 
+.btn-expand {
+  display: inline;
+  text-align: left;
+  font-size: 3vw;
+  font-weight: 700;
+}
+
+.cream-row .btn-expand {
+  color: #154260;
+}
+
+.purple-row .btn-expand {
+  color: #EFEBE0;
+}
+
 /*# sourceMappingURL=theme-bootstrap4.css.map */

@@ -207,3 +207,18 @@ header {
     font-size: 2.5vw;
     color: $cream;
 }
+//expander stuff
+.btn-expand {
+    display: inline;
+    text-align: left;
+    font-size: 3vw;
+    font-weight: 700;
+}
+
+.cream-row .btn-expand {
+    color: $primary;
+}
+
+.purple-row .btn-expand {
+    color: $cream;
+}

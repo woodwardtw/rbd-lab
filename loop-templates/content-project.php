@@ -58,7 +58,6 @@ defined( 'ABSPATH' ) || exit;
             </div>
         </div>
 
-
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

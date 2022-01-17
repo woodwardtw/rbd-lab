@@ -146,3 +146,62 @@ function rbd_all_projects(){
 	// Reset Post Data
 	wp_reset_postdata();
 }
+
+
+function rbd_collapser($title,$content, $color){
+	$id = sanitize_title($title);
+	return "
+	<div class='row {$color}-row expander'>
+		<button class='btn btn-expand' id='btn-{$id}' type='button' data-bs-toggle='collapse' data-bs-target='#{$id}' aria-expanded='false' aria-controls='{$id}'>
+			+ {$title}
+		</button>
+		<div class='collapse' id='{$id}'>
+			<div class='collapse-body'>
+			{$content}
+			</div>
+		</div>
+	</div>
+	";
+}
+
+function rbd_get_partners(){
+	// Check rows exists.
+	if( have_rows('partners') ):
+		$html = '';
+		// Loop through rows.
+		while( have_rows('partners') ) : the_row();
+
+			// Load sub field value.
+			$title = get_sub_field('partner_name');
+			$link = get_sub_field('partner_url');
+			// Do something...
+		$html .= '<div class="col-md-3 partner-box">' . rbd_circle_maker($title,$link) . '</div>';
+		// End loop.
+		endwhile;
+		return '<div class="row">' . $html . '</div>';
+	// No value.
+	else :
+		// Do something...
+	endif;
+}
+
+function rbd_get_funders(){
+	// Check rows exists.
+	if( have_rows('funders') ):
+		$html = '';
+		// Loop through rows.
+		while( have_rows('funders') ) : the_row();
+
+			// Load sub field value.
+			$title = get_sub_field('funder_name');
+			$link = get_sub_field('funder_url');
+			// Do something...
+		$html .= '<div class="col-md-3 partner-box">' . rbd_circle_maker($title,$link) . '</div>';
+		// End loop.
+		endwhile;
+		return '<div class="row">' . $html . '</div>';
+	// No value.
+	else :
+		// Do something...
+	endif;
+}
