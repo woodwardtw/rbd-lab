@@ -17303,6 +17303,14 @@ header {
   font-weight: 700;
 }
 
+.btn-expand:before {
+  content: "-";
+}
+
+.btn-expand.collapsed:before {
+  content: "+";
+}
+
 .cream-row .btn-expand {
   color: #154260;
 }

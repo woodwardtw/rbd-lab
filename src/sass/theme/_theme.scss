@@ -215,6 +215,14 @@ header {
     font-weight: 700;
 }
 
+.btn-expand:before {
+    content: '-';
+}
+
+.btn-expand.collapsed:before {
+    content: '+';
+}
+
 .cream-row .btn-expand {
     color: $primary;
 }
@@ -222,3 +230,5 @@ header {
 .purple-row .btn-expand {
     color: $cream;
 }
+
+//nothing

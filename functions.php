@@ -152,8 +152,8 @@ function rbd_collapser($title,$content, $color){
 	$id = sanitize_title($title);
 	return "
 	<div class='row {$color}-row expander'>
-		<button class='btn btn-expand' id='btn-{$id}' type='button' data-bs-toggle='collapse' data-bs-target='#{$id}' aria-expanded='false' aria-controls='{$id}'>
-			+ {$title}
+		<button class='btn btn-expand collapsed' id='btn-{$id}' type='button' data-bs-toggle='collapse' data-bs-target='#{$id}' aria-expanded='false' aria-controls='{$id}'>
+			 {$title}
 		</button>
 		<div class='collapse' id='{$id}'>
 			<div class='collapse-body'>

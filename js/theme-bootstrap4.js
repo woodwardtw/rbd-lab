@@ -9594,6 +9594,10 @@
     }
   })();
 
+  // Add your JS customizations here
+  console.log('foo');
+  document.querySelector('entry-title').innerHTML = 'fooooooooo';
+
   exports.Alert = Alert;
   exports.Button = Button;
   exports.Carousel = Carousel;
