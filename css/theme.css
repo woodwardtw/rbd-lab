@@ -17101,6 +17101,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-weight: 700;
 }
 
+p {
+  font-weight: 500;
+}
+
 .entry-title, h1, .h1 {
   font-size: 3em;
 }
@@ -17382,9 +17386,10 @@ header {
 }
 
 .lands {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #154260;
   margin: 30px 0;
+  font-weight: 500;
 }
 
 .credit {
