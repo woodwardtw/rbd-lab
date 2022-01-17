@@ -25,8 +25,12 @@ defined( 'ABSPATH' ) || exit;
 		the_content();
         $partner_content = rbd_get_partners();
         $funder_content = rbd_get_funders();
+        $collab_content = rbd_get_collab();
+        $join_content = rbd_get_join();
         echo rbd_collapser('Partnered Organizations', $partner_content, 'cream');
         echo rbd_collapser('Funders', $funder_content, 'purple');
+        echo rbd_collapser('Collaborate with Us', $collab_content, 'cream');
+        echo rbd_collapser('Join the Adaptation Learning Network', $join_content, 'purple');
 		//understrap_link_pages();
 		?>
 

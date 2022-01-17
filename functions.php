@@ -205,3 +205,15 @@ function rbd_get_funders(){
 		// Do something...
 	endif;
 }
+
+function rbd_get_collab(){
+	if(get_field('collaborate')){
+		return get_field('collaborate');
+	}
+}
+
+function rbd_get_join(){
+	if(get_field('join')){
+		return get_field('join');
+	}
+}
