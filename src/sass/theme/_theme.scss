@@ -251,11 +251,16 @@ header {
     color: $cream;
 }
 
-//search form
+//footer
+.credit-box {
+    padding-left: 40px;
+}
+
 .search-field {
     background-color: $primary;
     color: #fff;
     padding: 15px;
+    border-radius: 0;
 }
 
 .search-field::placeholder {
@@ -269,9 +274,15 @@ header {
     border: 0;
 }
 
+.lands {
+    font-size: 1.5em;
+    color: $primary;
+    margin: 30px 0;
+}
+
 .credit {
     display: flex;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .footer-rr {
@@ -280,4 +291,56 @@ header {
 
 .footer-rbd {
     width: 67%;
+}
+
+.ginput_container input, .ginput_container textarea {
+    background-color: $primary;
+    color: #fff;
+    border: none;
+    padding: 15px !important;
+}
+
+.ginput_container input::placeholder, .ginput_container textarea::placeholder {
+    background-color: $primary;
+    color: #fff;
+}
+
+#input_1_2{
+    height: 130px;
+}
+
+
+.social {
+    display: flex;
+}
+
+.social .circle {
+    width: 90px;
+    margin-right: 20px;
+}
+
+.social .circle:after {
+    background-color: $orange;
+}
+
+.twitter {
+    background-image: url(../imgs/twitter.svg);
+    background-position: center center;
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+}
+
+.linkedin {
+    background-image: url(../imgs/linkedin.svg);
+    background-position: center center;
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+}
+
+.facebook {
+    background-image: url(../imgs/facebook.svg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $cream;
 }

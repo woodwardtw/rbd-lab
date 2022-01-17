@@ -28,8 +28,39 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="row">
 					<div class="col-md-5">
 						<h2>CONTACT US</h2>
+						<?php echo do_shortcode( '[gravityform id="1" title="false" description="false" ajax="true" tabindex="49"]');?>
+						<div class="social">
+							<a href="https://twitter.com/resiliencebyd">
+								<div class='circle'>
+									<div class='circle__inner'>
+										<div class='circle__wrapper'>	  			
+											<div class='circle__content twitter'>
+											</div>				
+										</div>
+									</div>
+								</div>
+							</a>
+					
+							<div class='circle'>
+								<div class='circle__inner'>
+									<div class='circle__wrapper'>	  			
+										<div class='circle__content linkedin'>
+										</div>				
+									</div>
+								</div>
+							</div>
+					
+							<div class='circle'>
+								<div class='circle__inner'>
+									<div class='circle__wrapper'>	  			
+										<div class='circle__content facebook'>
+										</div>				
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="col-md-7">
+					<div class="col-md-7 credit-box">
 						<?php get_search_form();?>
 						<p class="lands">The ResiliencebyDesign (RbD) Research Innovation Lab at Royal Roads University rests on the 
 							traditional and ancestral lands of the Xwsepsum (Esquimalt) and Lkwungen (Songhees) families, 
