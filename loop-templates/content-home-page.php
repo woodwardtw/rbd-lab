@@ -19,6 +19,16 @@ defined( 'ABSPATH' ) || exit;
 
 
 	<div class="entry-content">
+		<div class="row project cream-row logo-row">
+			<div class="col-md-7">				
+				<img class="home-logo-big" src="<?php echo get_template_directory_uri();?>/imgs/rbd-logo-white.png" alt="Resilience by Design Lab logo.">
+			</div>
+			<div class="col-md-5">
+				<div class="rbd-statement">
+					The ResiliencebyDesign Lab inspires climate action through research, innovation, and connections.
+				</div>
+			</div>
+		</div>
 		<div class="row project purple-row projects">
 			<div class="project-list col-md-12">
 				<h1>Projects</h1>
@@ -36,7 +46,7 @@ defined( 'ABSPATH' ) || exit;
 				</div>
 			</div>
 				<div class="col-md-4">
-					<img src="<?php echo  get_template_directory_uri();?>/imgs/news.svg" alt="News icon.">
+					<img src="<?php echo get_template_directory_uri();?>/imgs/news.svg" alt="News icon.">
 				</div>
 			</div>
 		</div>

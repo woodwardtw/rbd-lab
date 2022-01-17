@@ -36,6 +36,26 @@ header {
     max-width: 70px;
 }
 
+.cream-row.logo-row {
+    padding-top: 20px;
+}
+
+.rbd-statement {
+    color: #fff;
+    padding: 15px;
+    margin-left: 5vw;
+    margin-top: 10vw;
+    font-size: 2vw;
+    font-weight: 600;
+    line-height: 1.1em;
+    background-color: $primary;
+}
+
+.home-logo-big {
+    background-color: $primary;
+    padding: 20px;
+}
+
 .purple-row {
     background-color: $purple;
     color: $cream;

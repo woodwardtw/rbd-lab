@@ -17124,6 +17124,26 @@ header {
   max-width: 70px;
 }
 
+.cream-row.logo-row {
+  padding-top: 20px;
+}
+
+.rbd-statement {
+  color: #fff;
+  padding: 15px;
+  margin-left: 5vw;
+  margin-top: 10vw;
+  font-size: 2vw;
+  font-weight: 600;
+  line-height: 1.1em;
+  background-color: #154260;
+}
+
+.home-logo-big {
+  background-color: #154260;
+  padding: 20px;
+}
+
 .purple-row {
   background-color: #7C859A;
   color: #EFEBE0;
