@@ -251,4 +251,33 @@ header {
     color: $cream;
 }
 
-//nothing
+//search form
+.search-field {
+    background-color: $primary;
+    color: #fff;
+    padding: 15px;
+}
+
+.search-field::placeholder {
+    background-color: $primary;
+    color: #fff;
+}
+
+.submit {
+    color: $primary;
+    background-color: #fff;
+    border: 0;
+}
+
+.credit {
+    display: flex;
+    margin-top: 30px;
+}
+
+.footer-rr {
+    width:33%;
+}
+
+.footer-rbd {
+    width: 67%;
+}
