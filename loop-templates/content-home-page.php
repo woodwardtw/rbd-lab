@@ -22,6 +22,17 @@ defined( 'ABSPATH' ) || exit;
 		<div class="row project cream-row logo-row">
 			<div class="col-md-7">				
 				<img class="home-logo-big" src="<?php echo get_template_directory_uri();?>/imgs/rbd-logo-white.png" alt="Resilience by Design Lab logo.">
+				<div class="social">
+				<div class='circle'>
+					<div class='circle__inner'>
+						<div class='circle__wrapper'>	  			
+							<div class='circle__content twitter'>
+								</a>
+							</div>				
+						</div>
+					</div>
+				</div>
+				</div>
 			</div>
 			<div class="col-md-5">
 				<div class="rbd-statement">
