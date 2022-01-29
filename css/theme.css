@@ -17118,7 +17118,7 @@ header {
 }
 
 #main-menu a {
-  font-size: 2.5vw;
+  font-size: clamp(2rem, 4vw + 1rem, 2rem);
   font-weight: 800;
   color: #154260;
   margin-left: 2.5vw;
@@ -17128,8 +17128,14 @@ header {
   max-width: 70px;
 }
 
-.cream-row.logo-row {
-  padding-top: 20px;
+#logo-row {
+  padding: 0;
+  margin-bottom: 100px;
+}
+
+#logo-col {
+  position: relative;
+  padding: 0 60px;
 }
 
 .rbd-statement {
@@ -17141,11 +17147,10 @@ header {
   font-weight: 600;
   line-height: 1.1em;
   background-color: #154260;
-}
-
-.home-logo-big {
-  background-color: #154260;
-  padding: 20px;
+  position: absolute;
+  right: 100px;
+  top: 0;
+  width: 390px;
 }
 
 .purple-row {
@@ -17165,22 +17170,25 @@ header {
 }
 
 .projects {
-  background-image: url(../imgs/gear_puzzle.png);
+  background-image: url(../imgs/projects.svg);
   background-position: 90% center;
   background-size: 420px 420px;
   background-repeat: no-repeat;
 }
 
 .home-project .project-link {
-  font-size: 2.2vw;
+  font-size: clamp(2rem, 4vw + 1rem, 2rem);
   color: #EFEBE0;
   font-weight: 600;
   margin-left: 40px;
   text-decoration: none;
+  display: block;
+  line-height: 1.2;
+  margin: 20px 0;
 }
 
 .see-more a {
-  font-size: 1.8vw;
+  font-size: 2rem;
   font-weight: 600;
   margin: 50px 0;
   text-decoration: none;
@@ -17220,11 +17228,11 @@ header {
 
 .home-article {
   margin: 20px 0 40px 100px;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
 }
 
 .news-author {
-  font-size: 1.4vw;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #7C859A;
 }
@@ -17273,7 +17281,7 @@ header {
 }
 
 .circle__content a {
-  font-size: 4vw;
+  font-size: clamp(2.5rem, 4vw + 1rem, 2rem);
   font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -17316,7 +17324,7 @@ header {
 
 .all-projects-row .circle__content a {
   line-height: 1.1em;
-  font-size: 2.5vw;
+  font-size: clamp(2rem, 4vw + 1rem, 2rem);
   color: #EFEBE0;
 }
 
@@ -17478,5 +17486,15 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #EFEBE0;
+}
+
+@media only screen and (max-width: 700px) {
+  .projects {
+    background-image: none;
+  }
+
+  .home-article {
+    margin-left: 0;
+  }
 }
 /*# sourceMappingURL=theme.css.map */
