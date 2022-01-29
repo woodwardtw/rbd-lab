@@ -217,3 +217,39 @@ function rbd_get_join(){
 		return get_field('join');
 	}
 }
+
+function rbd_methods_carousel(){
+	$html = '';
+	$args = array(
+		'post_type' => array('methods'),
+		'posts_per_page' => 20,
+    	'nopaging' => true, 
+	);
+	$active = 'active';
+	$method_query = new WP_Query( $args );
+	// The Loop
+	if ( $method_query->have_posts() ) :
+		while ( $method_query->have_posts() ) : $method_query->the_post();
+			$title = get_the_title();
+			$content = get_the_content();
+			$item = "
+				<div class='carousel-item {$active}'>
+					<div class='col-md-4'>
+						<div class='card method'>
+							<h2>{$title}</h2>
+							<div class='method-content'>
+								{$content}
+							</div>
+						</div>
+					</div>
+				</div>";
+		$html .= $item;
+		$active = '';
+		endwhile;
+		return $html;
+		// No value.
+	else :
+		// Do something...
+	endif;
+
+}
