@@ -29,7 +29,7 @@ defined( 'ABSPATH' ) || exit;
         </div>
         <div class="row purple-row methods">
             <div class="col-md-12"><h1 id="methods">Methods</h1></div>
-            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
             <div class="carousel-inner" role="listbox">
                 <?php echo rbd_methods_carousel();?>                
                
