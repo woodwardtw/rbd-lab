@@ -16168,6 +16168,10 @@ header {
   color: #7C859A;
 }
 
+.all-news-row {
+  margin: 50px 3vw;
+}
+
 .story {
   padding: 0 3vw 50px 3vw;
   font-size: 1.4rem;
@@ -16181,7 +16185,6 @@ header {
   display: block;
   margin: 2em 0;
   background-color: transparent;
-  color: #222;
   text-align: center;
 }
 

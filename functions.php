@@ -254,7 +254,33 @@ function rbd_methods_carousel(){
 
 }
 
-//allow svg
+//news page
+
+//news page
+function rbd_all_news(){
+
+	if( have_rows('news_content_links') ):
+
+		// Loop through rows.
+		while( have_rows('news_content_links') ) : the_row();
+
+			// Load sub field value.
+			$title = get_sub_field('title');
+			$link = get_sub_field('news_url');
+			// Do something...			
+			$html = '<div class="col-md-4">' . rbd_circle_maker($title,$link) . "</div>";
+		echo $html;
+		// End loop.
+		endwhile;
+
+	// No value.
+	else :
+		// Do something...
+	endif;
+
+}
+
+//allow svg**doesn't seem to work
 function allow_svg_mime_types($mimes) {
   $mimes['svg'] = 'image/svg+xml';
   return $mimes;
