@@ -253,3 +253,10 @@ function rbd_methods_carousel(){
 	endif;
 
 }
+
+//allow svg
+function allow_svg_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'allow_svg_mime_types');

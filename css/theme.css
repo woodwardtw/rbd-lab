@@ -17156,13 +17156,13 @@ header {
 .purple-row {
   background-color: #7C859A;
   color: #EFEBE0;
-  padding: 100px 8vw;
+  padding: 100px 3vw;
 }
 
 .cream-row {
   background-color: #EFEBE0;
   color: #154260;
-  padding: 100px 8vw;
+  padding: 100px 3vw;
 }
 
 .purple-row h1, .purple-row .h1, .purple-row h2, .purple-row .h2 {
@@ -17235,6 +17235,11 @@ header {
   font-size: 1.4rem;
   font-weight: 600;
   color: #7C859A;
+}
+
+.story {
+  padding: 0 3vw 50px 3vw;
+  font-size: 1.4rem;
 }
 
 /**
@@ -17326,6 +17331,19 @@ header {
   line-height: 1.1em;
   font-size: clamp(2rem, 4vw + 1rem, 2rem);
   color: #EFEBE0;
+}
+
+.container-fluid .entry-title, .container-sm .entry-title, .container-md .entry-title, .container-lg .entry-title, .container-xl .entry-title, .container-xxl .entry-title {
+  margin: 0 30px 50px 3vw;
+}
+
+.project-thumb {
+  margin: 0 0 70px 3vw;
+}
+
+.project-summary {
+  margin: 0 3vw;
+  font-size: 1.4rem;
 }
 
 .btn-expand {

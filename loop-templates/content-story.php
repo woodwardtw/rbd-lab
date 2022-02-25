@@ -20,9 +20,10 @@ defined( 'ABSPATH' ) || exit;
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 	<div class="entry-content">
-
-		<?php
-		the_content();
+		<div class="story">
+			<?php the_content();?>
+		</div>
+		<?php		
         $vision_content = get_field('vision');
         $do_content = get_field('what_we_do');
         $weaving_content = get_field('weaving_connections');

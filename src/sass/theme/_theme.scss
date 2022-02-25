@@ -69,13 +69,13 @@ header {
 .purple-row {
     background-color: $purple;
     color: $cream;
-    padding: 100px 8vw;
+    padding: 100px 3vw;
 }
 
 .cream-row {
     background-color: $cream;
     color: $primary;
-    padding: 100px 8vw;
+    padding: 100px 3vw;
 }
 
 .purple-row h1, .purple-row h2 {
@@ -148,6 +148,13 @@ header {
     font-size: 1.4rem;
     font-weight: 600;
     color: $purple;
+}
+
+//story
+
+.story {
+    padding: 0 3vw 50px 3vw;
+    font-size: 1.4rem;
 }
 /**
  * Circle Styles
@@ -240,6 +247,22 @@ header {
     font-size: clamp(2rem, 4vw + 1rem, 2rem);
     color: $cream;
 }
+
+//single projects
+.container-fluid .entry-title {
+    margin: 0 30px 50px 3vw;
+
+}
+
+.project-thumb {
+    margin: 0 0 70px 3vw;
+}
+
+.project-summary {
+    margin: 0 3vw;
+    font-size: 1.4rem;
+}
+
 //expander stuff
 .btn-expand {
     display: inline;
