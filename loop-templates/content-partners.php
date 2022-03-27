@@ -23,8 +23,8 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php
 		the_content();
-        $partner_content = rbd_get_partners();
-        $funder_content = rbd_get_funders();
+        $partner_content = rbd_all_partners('organization');
+        $funder_content = rbd_all_partners('funder');
         $collab_content = rbd_get_collab();
         $join_content = rbd_get_join();
         echo rbd_collapser('Partnered Organizations', $partner_content, 'cream');

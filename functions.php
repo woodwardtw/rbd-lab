@@ -280,6 +280,36 @@ function rbd_all_news(){
 
 }
 
+
+//partners
+function rbd_all_partners($partner_type){
+	$args = array(
+		'post_type' => array('partner'),
+		'posts_per_page' => -1,
+    	'nopaging' => true, 
+		'category_name' => $partner_type,
+	);
+	$the_query = new WP_Query( $args );
+	// The Loop
+	$html = '';
+	if ( $the_query->have_posts() ) :
+	while ( $the_query->have_posts() ) : $the_query->the_post();
+	// Do Stuff
+		$post_id = get_the_ID();
+		$title = get_the_title();
+		$link = get_field('partner_link', $post_id);
+		$circle =  rbd_circle_maker($title,$link);
+		$html .= "<div class='col-md-4'>{$circle}</div>";
+		
+	endwhile;
+	return "<div class='row'>$html</div>";
+	endif;
+
+	// Reset Post Data
+	wp_reset_postdata();
+}
+
+
 //allow svg**doesn't seem to work
 function allow_svg_mime_types($mimes) {
   $mimes['svg'] = 'image/svg+xml';
