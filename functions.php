@@ -185,6 +185,23 @@ function rbd_get_partners(){
 	endif;
 }
 
+function rbd_proj_partner_builder(){
+    if(get_field('partners')){
+    	$html = '';
+        $partners = get_field('partners');
+        foreach ($partners as $key => $partner) {
+        		$post_id = $partner->ID;
+        		$title = $partner->post_name;
+						$link = get_post_permalink($post_id);
+        	// code...
+						$html .= '<div class="col-md-3 partner-box">' . rbd_circle_maker($title,$link) . '</div>';
+        }
+        	return '<div class="row">' . $html . '</div>';
+    }
+}
+
+
+
 function rbd_get_funders(){
 	// Check rows exists.
 	if( have_rows('funders') ):

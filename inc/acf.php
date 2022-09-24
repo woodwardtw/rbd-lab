@@ -17,7 +17,6 @@ function rbd_home_project_text(){
 }
 
 
-
     //save acf json
         add_filter('acf/settings/save_json', 'rbd_lab_json_save_point');
          

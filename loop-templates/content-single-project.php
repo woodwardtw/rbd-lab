@@ -35,7 +35,7 @@ defined( 'ABSPATH' ) || exit;
         $process_content = get_field('process');
         echo rbd_collapser('Process',$process_content, 'cream');
         
-        $partners_content = 'not live yet';
+        $partners_content = rbd_proj_partner_builder();
         echo rbd_collapser('Partners',$partners_content, 'purple');
         
         $impact_content = get_field('impact');
