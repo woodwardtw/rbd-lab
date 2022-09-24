@@ -247,15 +247,19 @@ function rbd_methods_carousel(){
 	if ( $method_query->have_posts() ) :
 		while ( $method_query->have_posts() ) : $method_query->the_post();
 			$title = get_the_title();
-			$content = get_the_content();
+			$content =  htmlspecialchars(wpautop(get_the_content()),ENT_QUOTES);
+			$excerpt = get_the_excerpt();
+			$clean_excerpt = substr($excerpt, 0, 320);
+			$post_id = get_the_ID();
 			$item = "
 				<div class='carousel-item {$active}'>
 					<div class='col-md-4'>
 						<div class='card method'>
 							<h2>{$title}</h2>
 							<div class='method-content'>
-								{$content}
+								{$clean_excerpt} . . .								
 							</div>
+							<button type='button' class='btn btn-primary method-button' data-bs-toggle='modal' data-bs-target='#methodModal' aria-label='Method details for {$title}.' data-bs-method='{$title}' data-bs-content='{$content}'>Method Details</button>
 						</div>
 					</div>
 				</div>";

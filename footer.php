@@ -40,24 +40,29 @@ $container = get_theme_mod( 'understrap_container_type' );
 									</div>
 								</div>
 							</a>
-					
-							<div class='circle'>
-								<div class='circle__inner'>
-									<div class='circle__wrapper'>	  			
-										<div class='circle__content linkedin'>
-										</div>				
+						<div class="social">
+							<a href="https://linkedin.com">
+								<div class='circle'>
+									<div class='circle__inner'>
+										<div class='circle__wrapper'>	  			
+											<div class='circle__content linkedin'>
+											</div>				
+										</div>
 									</div>
 								</div>
-							</div>
-					
-							<div class='circle'>
-								<div class='circle__inner'>
-									<div class='circle__wrapper'>	  			
-										<div class='circle__content facebook'>
-										</div>				
+							</a>
+						</div>
+						<div class="social">
+							<a href="https://www.facebook.com/ResiliencebyDesignlab/">
+								<div class='circle'>
+									<div class='circle__inner'>
+										<div class='circle__wrapper'>	  			
+											<div class='circle__content facebook'>
+											</div>				
+										</div>
 									</div>
 								</div>
-							</div>
+							</a>
 						</div>
 					</div>
 					<div class="col-md-7 credit-box">

@@ -47,6 +47,19 @@ defined( 'ABSPATH' ) || exit;
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
+        <div class="modal fade" id="methodModal" tabindex="-1" aria-labelledby="methodDetailLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title" id="methodDetailLabel"></h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                
+              </div>
+            </div>
+          </div>
+        </div>
 
 		<?php understrap_edit_post_link(); ?>
 

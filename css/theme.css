@@ -17399,7 +17399,12 @@ header {
 .method-content {
   color: #154260;
   overflow: hidden;
-  max-height: 400px;
+  height: 300px;
+}
+
+.method-button {
+  display: block;
+  margin: 40px auto;
 }
 
 .carousel-control-next, .carousel-control-prev {
