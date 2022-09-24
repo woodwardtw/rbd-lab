@@ -52,7 +52,6 @@ function rbd_home_projects(){
 	$args = array(
 		'post_type' => array('project'),
 		'posts_per_page' => 4,
-    	'nopaging' => true, 
 	);
 	$the_query = new WP_Query( $args );
 
