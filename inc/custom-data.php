@@ -60,7 +60,7 @@ $labels = array(
     'show_in_rest' => true,
     'publicly_queryable' => true,
     'capability_type' => 'post',
-    'menu_icon' => 'dashicons-admin-users',
+    'menu_icon' => 'dashicons-networking',
   );
   register_post_type( 'project', $args );
   
@@ -122,7 +122,7 @@ $labels = array(
     'show_in_rest' => true,
     'publicly_queryable' => true,
     'capability_type' => 'post',
-    'menu_icon' => 'dashicons-admin-users',
+    'menu_icon' => 'dashicons-admin-tools',
   );
   register_post_type( 'methods', $args );
   
@@ -184,7 +184,7 @@ $labels = array(
     'show_in_rest' => true,
     'publicly_queryable' => true,
     'capability_type' => 'post',
-    'menu_icon' => 'dashicons-admin-users',
+    'menu_icon' => 'dashicons-buddicons-buddypress-logo',
   );
   register_post_type( 'partner', $args );
   
