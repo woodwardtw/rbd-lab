@@ -274,7 +274,21 @@ function rbd_methods_carousel(){
 
 }
 
-//news page
+//resources page
+
+function rbd_all_resources(){
+	if(get_field('add_a_resource')){
+		$resources = get_field('add_a_resource');
+		//var_dump($resources);
+		foreach ($resources as $key => $resource) {
+			$post_id = $resource->ID;
+			$title = get_the_title($post_id);
+			$link = get_the_permalink($post_id);
+			$html = '<div class="col-md-4 all-projects">' . rbd_circle_maker($title,$link) . "</div>";
+			echo $html;
+		}	
+	}		
+}
 
 //news page
 function rbd_all_news(){
