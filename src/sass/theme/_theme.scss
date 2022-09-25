@@ -255,19 +255,32 @@ header {
   }
 
   //Projects page 
-.all-projects-row {
+.all-projects-row, .all-news-row, .all-partners-row   {
     padding: 30px 60px;
 }
 
-.all-projects-row  .circle:after  {
+.all-projects-row  .circle:after, .all-news-row  .circle:after   {
     background-color: $primary;
 }
 
-.all-projects-row .circle__content a{
+.all-projects-row .circle__content a, .all-news-row .circle__content a{
     line-height: 1.1em;
     font-size: clamp(1.75rem, 3vw + 1rem, 2rem);
     color: $cream;
 }
+
+//all partners page 
+
+.all-partners-row  .circle:after {
+    background-color: #fff;
+}
+
+.all-partners-row .circle__content a{
+    line-height: 1.1em;
+    font-size: clamp(1.75rem, 3vw + 1rem, 2rem);
+    color: $primary;
+}
+ 
 
 //single projects
 .container-fluid .entry-title {

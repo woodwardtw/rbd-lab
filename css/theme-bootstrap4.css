@@ -16269,18 +16269,28 @@ header {
   padding: 80px 30px;
 }
 
-.all-projects-row {
+.all-projects-row, .all-news-row, .all-partners-row {
   padding: 30px 60px;
 }
 
-.all-projects-row .circle:after {
+.all-projects-row .circle:after, .all-news-row .circle:after {
   background-color: #154260;
 }
 
-.all-projects-row .circle__content a {
+.all-projects-row .circle__content a, .all-news-row .circle__content a {
   line-height: 1.1em;
   font-size: clamp(1.75rem, 3vw + 1rem, 2rem);
   color: #EFEBE0;
+}
+
+.all-partners-row .circle:after {
+  background-color: #fff;
+}
+
+.all-partners-row .circle__content a {
+  line-height: 1.1em;
+  font-size: clamp(1.75rem, 3vw + 1rem, 2rem);
+  color: #154260;
 }
 
 .container-fluid .entry-title, .container-sm .entry-title, .container-md .entry-title, .container-lg .entry-title, .container-xl .entry-title {
