@@ -323,7 +323,7 @@ function rbd_all_partners($partner_type){
 		foreach ($partners as $key => $partner) {
 			$post_id = $partner;
 			$title = get_the_title($post_id);
-			$link = get_post_permalink($post_id);
+			$link = get_field('partner_link', $post_id);
 			$html .= "<div class='col-md-3 all-projects'>" . rbd_circle_maker($title,$link) . "</div>";
 		
 			// code...
