@@ -147,7 +147,7 @@ function rbd_all_projects(){
 }
 
 
-function rbd_collapser($title,$content, $color){
+function rbd_collapser($title, $content, $color){
 	$id = sanitize_title($title);
 	return "
 	<div class='row {$color}-row expander'>
@@ -155,7 +155,7 @@ function rbd_collapser($title,$content, $color){
 			 {$title}
 		</button>
 		<div class='collapse' id='{$id}'>
-			<div class='collapse-body'>
+			<div class='collapse-body {$id}'>
 			{$content}
 			</div>
 		</div>
@@ -332,6 +332,48 @@ function rbd_all_partners($partner_type){
 	}
 
 }
+//story page
+
+function rbd_wwd_carousel(){
+	$html = '';
+	if( have_rows('what_we_do') ):
+	$active = 'active';
+	    // Loop through rows.
+	    while( have_rows('what_we_do') ) : the_row();
+
+	        // Load sub field value.
+	        $title = get_sub_field('title');
+	        $content = get_sub_field('content');
+	        $content_data =  htmlspecialchars(wpautop($content),ENT_QUOTES);
+					$clean_excerpt = substr($content, 0, 320);
+					$post_id = get_the_ID();
+					$item = "
+						<div class='carousel-item {$active}'>
+							<div class='col-md-4'>
+								<div class='card method'>
+									<h2>{$title}</h2>
+									<div class='method-content'>
+										{$clean_excerpt} . . .								
+									</div>
+									<button type='button' class='btn btn-primary method-button' data-bs-toggle='modal' data-bs-target='#methodModal' aria-label='Method details for {$title}.' data-bs-method='{$title}' data-bs-content='{$content_data}'>Method Details</button>
+								</div>
+							</div>
+						</div>";
+				$html .= $item;
+				$active = '';
+	        // Do something...
+
+	    // End loop.
+	    endwhile;
+	    return $html;
+	// No value.
+	else :
+	    // Do something...
+	endif;
+
+
+}
+
 
 
 //allow svg**doesn't seem to work

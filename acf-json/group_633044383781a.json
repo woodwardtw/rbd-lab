@@ -15,7 +15,9 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": "",
+            "post_type": [
+                "page"
+            ],
             "taxonomy": "",
             "filters": [
                 "search",
@@ -57,5 +59,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664107685
+    "modified": 1664109876
 }

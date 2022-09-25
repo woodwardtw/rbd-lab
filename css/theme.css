@@ -17257,6 +17257,11 @@ header {
 
 .story {
   padding: 0 3vw 50px 3vw;
+  color: #154260;
+}
+
+.story p, .vision p, .what-we-do p {
+  margin: 0 100px;
   font-size: 1.4rem;
 }
 
@@ -17630,6 +17635,10 @@ header {
 
   .all-projects .circle__content {
     padding: 1.5em;
+  }
+
+  .story p {
+    margin: 0 10px 0 0;
   }
 }
 @media (max-width: 767px) {
