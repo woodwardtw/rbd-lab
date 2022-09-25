@@ -48,7 +48,7 @@ defined( 'ABSPATH' ) || exit;
 				</div>
 			</div>
 		</div>
-		<div class="row purple-row links">
+		<div class="row purple-row links home-trio">
 			<div class="col-md-4">
 				<?php echo rbd_circle_maker('Story','story')?>
 			</div>

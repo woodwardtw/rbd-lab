@@ -28,16 +28,18 @@ defined( 'ABSPATH' ) || exit;
             ?>
         </div>
         <div class="row purple-row methods">
-            <div class="col-md-12"><h1 id="methods">Methods</h1></div>
-            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <div class="col-md-12">
+                <h1 id="methods">Methods</h1>
+            </div>
+            <div id="methods-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
             <div class="carousel-inner" role="listbox">
                 <?php echo rbd_methods_carousel();?>                
                
             </div>
-            <a class="carousel-control-prev w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+            <a class="carousel-control-prev w-aut" href="#methods-carousel" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             </a>
-            <a class="carousel-control-next w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+            <a class="carousel-control-next w-aut" href="#methods-carousel" role="button" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </a>
         </div>

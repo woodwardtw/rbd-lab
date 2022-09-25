@@ -137,7 +137,7 @@ function rbd_all_projects(){
 	// Do Stuff
 		$title = get_the_title();
 		$link = get_the_permalink();
-		$html = '<div class="col-md-4">' . rbd_circle_maker($title,$link) . "</div>";
+		$html = '<div class="col-md-4 all-projects">' . rbd_circle_maker($title,$link) . "</div>";
 		echo $html;
 	endwhile;
 	endif;

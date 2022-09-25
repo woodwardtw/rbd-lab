@@ -16057,6 +16057,9 @@ header {
 
 .d-lion-logo {
   max-width: 70px;
+  position: absolute;
+  top: 10px;
+  left: 80px;
 }
 
 #logo-row {
@@ -16107,15 +16110,18 @@ header {
   background-repeat: no-repeat;
 }
 
+.home-trio .circle__content a {
+  font-size: clamp(3.5rem, 5vw + 1rem, 3rem);
+}
+
 .home-project .project-link {
   font-size: clamp(2rem, 4vw + 1rem, 2rem);
   color: #EFEBE0;
   font-weight: 600;
-  margin-left: 40px;
   text-decoration: none;
   display: block;
   line-height: 1.2;
-  margin: 20px 0;
+  margin: 20px 0 20px 40px;
 }
 
 .see-more a {
@@ -16166,6 +16172,14 @@ header {
   font-size: 1.4rem;
   font-weight: 600;
   color: #7C859A;
+}
+
+.all-projects {
+  padding: 30px;
+}
+
+.all-projects .circle__content {
+  padding: 3em;
 }
 
 .all-news-row {
@@ -16265,7 +16279,7 @@ header {
 
 .all-projects-row .circle__content a {
   line-height: 1.1em;
-  font-size: clamp(2rem, 4vw + 1rem, 2rem);
+  font-size: clamp(1.75rem, 3vw + 1rem, 2rem);
   color: #EFEBE0;
 }
 
@@ -16303,6 +16317,10 @@ header {
 
 .purple-row .btn-expand {
   color: #EFEBE0;
+}
+
+#methods-carousel {
+  margin: 40px -20px;
 }
 
 .carousel-inner {
@@ -16522,8 +16540,24 @@ header {
   .btn-expand {
     font-size: 10vw;
   }
+
+  .all-projects-row {
+    padding: 0;
+  }
+
+  .all-projects {
+    padding: 15px;
+  }
+
+  .all-projects .circle__content {
+    padding: 1.5em;
+  }
 }
 @media (max-width: 767px) {
+  .d-lion-logo {
+    display: none;
+  }
+
   .carousel-inner .carousel-item > div {
     display: none;
   }

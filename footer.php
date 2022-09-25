@@ -41,7 +41,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								</div>
 							</a>
 						<div class="social">
-							<a href="https://linkedin.com">
+							<a href="https://www.linkedin.com/mwlite/company/adaptationlearningnetwork">
 								<div class='circle'>
 									<div class='circle__inner'>
 										<div class='circle__wrapper'>	  			
@@ -65,6 +65,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</a>
 						</div>
 					</div>
+				</div>
 					<div class="col-md-7 credit-box">
 						<?php get_search_form();?>
 						<p class="lands">The ResiliencebyDesign (RbD) Research Innovation Lab at Royal Roads University rests on the 
