@@ -355,7 +355,7 @@ function rbd_wwd_carousel(){
 									<div class='method-content'>
 										{$clean_excerpt} . . .								
 									</div>
-									<button type='button' class='btn btn-primary method-button' data-bs-toggle='modal' data-bs-target='#methodModal' aria-label='Method details for {$title}.' data-bs-method='{$title}' data-bs-content='{$content_data}'>Method Details</button>
+									<button type='button' class='btn btn-primary method-button' data-bs-toggle='modal' data-bs-target='#methodModal' aria-label='Read more about {$title}.' data-bs-method='{$title}' data-bs-content='{$content_data}'>Read more</button>
 								</div>
 							</div>
 						</div>";

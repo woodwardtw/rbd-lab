@@ -36,9 +36,9 @@ defined( 'ABSPATH' ) || exit;
         // echo rbd_collapser('Reimagining Research',$research_content, 'purple');
 		//understrap_link_pages();
 		?>
-		 <div class="row purple-row methods">
+		 <div class="row purple-row wwd">
             <div class="col-md-12">
-                <h1 id="methods">What We Do</h1>
+                <h1 id="what-we-do">What We Do</h1>
             </div>
             <div id="methods-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
             <div class="carousel-inner" role="listbox">
