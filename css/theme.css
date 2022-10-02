@@ -17483,7 +17483,7 @@ header {
   padding-left: 40px;
 }
 
-.search-field {
+.search-field, .wp-block-search__input {
   background-color: #154260;
   color: #fff;
   padding: 15px;
@@ -17515,10 +17515,11 @@ header {
   color: #fff;
 }
 
-.submit {
+.submit, .wp-block-search__button {
   color: #154260;
   background-color: #fff;
   border: 0;
+  margin: 0;
 }
 
 .lands {
@@ -17656,9 +17657,17 @@ header {
   padding: 0 40px 50px 0;
 }
 
+#right-sidebar {
+  margin-top: 10vh;
+}
+
 .widget h2, .widget .h2 {
   font-size: 1.5rem;
   margin-top: 30px;
+}
+
+.btn-secondary {
+  background-color: #154260;
 }
 
 @media (max-width: 767px) {

@@ -411,7 +411,7 @@ header {
     padding-left: 40px;
 }
 
-.search-field {
+.search-field, .wp-block-search__input  {
     background-color: $primary;
     color: #fff;
     padding: 15px;
@@ -423,10 +423,11 @@ header {
     color: #fff;
 }
 
-.submit {
+.submit, .wp-block-search__button {
     color: $primary;
     background-color: #fff;
     border: 0;
+    margin: 0;
 }
 
 .lands {
@@ -547,9 +548,17 @@ header {
 
 
 //sidebar
+#right-sidebar {
+    margin-top: 10vh;
+}
+
 .widget h2 {
     font-size: 1.5rem;
     margin-top: 30px;
+}
+
+.btn-secondary {
+    background-color: $navy;
 }
 
 @media (max-width: 767px) {
