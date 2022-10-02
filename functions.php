@@ -74,7 +74,6 @@ function rbd_home_news(){
 		'post_type' => array('post'),
 		'category_name' => 'news',
 		'posts_per_page' => 1,
-    	'nopaging' => true, 
 	);
 	$news_query = new WP_Query( $args );
 	//var_dump($the_query);
