@@ -160,6 +160,7 @@ header {
 .home-article p {
     margin-left: 14vw;
     padding-right: 3vw;
+    margin-top: 30px;
 }
 
 .news-author {
@@ -201,6 +202,12 @@ header {
 
 .post-navigation {
     display: none;
+}
+
+//archive
+
+#archive-wrapper .entry-title {
+    font-size: 2rem;
 }
 
 /**
