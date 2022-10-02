@@ -16037,7 +16037,7 @@ p {
 }
 
 .entry-title, h1 {
-  font-size: 3em;
+  font-size: 3.5rem;
 }
 
 header {
@@ -16106,12 +16106,16 @@ header {
 .projects {
   background-image: url(../imgs/projects.svg);
   background-position: 90% center;
-  background-size: 420px 420px;
+  background-size: 620px 620px;
   background-repeat: no-repeat;
 }
 
 .home-trio .circle__content a {
-  font-size: clamp(3.5rem, 5vw + 1rem, 3rem);
+  font-size: clamp(3.5rem, 6vw + 1rem, 5rem);
+}
+
+.home-trio .circle:after {
+  background-color: #EFEBE0;
 }
 
 .home-project .project-link {
@@ -16164,8 +16168,12 @@ header {
 }
 
 .home-article {
-  margin: 20px 0 40px 100px;
   font-size: 1.5rem;
+}
+
+.home-article p {
+  margin-left: 14vw;
+  padding-right: 3vw;
 }
 
 .news-author {
@@ -16191,13 +16199,17 @@ header {
   color: #154260;
 }
 
-.story p, .vision p, .what-we-do p {
+.story p, .vision p, .what-we-do p, .process p, .impact p, .reports-publications p, .partners p {
   margin: 0 100px;
   font-size: 1.4rem;
 }
 
 .wwd {
   margin-top: 300px;
+}
+
+.post-navigation {
+  display: none;
 }
 
 /**
@@ -16288,7 +16300,7 @@ header {
 
 .all-projects-row .circle__content a, .all-news-row .circle__content a {
   line-height: 1.1em;
-  font-size: clamp(1.75rem, 3vw + 1rem, 2rem);
+  font-size: clamp(1.75rem, 5vw + 1rem, 3rem);
   color: #EFEBE0;
 }
 
@@ -16318,7 +16330,7 @@ header {
 .btn-expand {
   display: inline;
   text-align: left;
-  font-size: 3vw;
+  font-size: 3rem;
   font-weight: 700;
 }
 
@@ -16531,6 +16543,30 @@ header {
   background-color: #EFEBE0;
 }
 
+.bio-image {
+  margin: 0 auto;
+  display: block;
+  border-radius: 50%;
+}
+
+.active-members {
+  margin-bottom: 100px;
+}
+
+.bio-text {
+  font-size: 1.4rem;
+  padding-right: 80px;
+}
+
+.former-members {
+  margin-top: 80px;
+}
+
+.former-block {
+  text-align: center;
+  padding: 40px;
+}
+
 @media (max-width: 767px) {
   .projects {
     background-image: none;
@@ -16556,8 +16592,8 @@ header {
     margin: 30px auto;
   }
 
-  .btn-expand {
-    font-size: 10vw;
+  .btn-expand, h1, .entry-title {
+    font-size: 15vw;
   }
 
   .all-projects-row {
@@ -16572,8 +16608,12 @@ header {
     padding: 1.5em;
   }
 
-  .story p {
-    margin: 0 10px 0 0;
+  .story p, .vision p, .what-we-do p, .process p, .impact p, .reports-publications p {
+    margin: 0 15px 0 0;
+  }
+
+  .bio-text {
+    padding-right: 0;
   }
 }
 @media (max-width: 767px) {

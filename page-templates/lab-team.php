@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Partners Page
+ * Template Name: Lab Team Page
  *
- * Template for displaying partners related information.
+ * Template for displaying lab team.
  *
  * @package Understrap
  */
@@ -23,14 +23,14 @@ if ( is_front_page() ) {
 
 		<div class="row">
 
-			<div class="col-md-12 content-area partners" id="primary">
+			<div class="col-md-12 content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 
 					<?php
 					while ( have_posts() ) {
 						the_post();
-						get_template_part( 'loop-templates/content', 'partners' );
+						get_template_part( 'loop-templates/content', 'team' );
 
 						// If comments are open or we have at least one comment, load up the comment template.
 						if ( comments_open() || get_comments_number() ) {

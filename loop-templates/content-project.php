@@ -42,7 +42,7 @@ defined( 'ABSPATH' ) || exit;
             <a class="carousel-control-next w-aut" href="#methods-carousel" role="button" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </a>
-        </div>
+            </div>
             
         </div>
 
