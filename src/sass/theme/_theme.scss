@@ -306,7 +306,7 @@ header {
  
 
 //single projects
-.container-fluid .entry-title {
+.container-fluid .entry-title{
     margin: 0 30px 50px 3vw;
 
 }
@@ -500,10 +500,18 @@ header {
 
 //team
 
+.former-team-block {
+    margin-left: 3vw;
+}
+
 .bio-image {
     margin: 0 auto;
     display: block;
     border-radius: 50%;
+}
+
+.bio-title-former {
+    margin-top: 20px;
 }
 
 .active-members {

@@ -440,7 +440,7 @@ function rbd_current_team(){
 		    );
 		  $the_query = new WP_Query( $args );
 		                    if( $the_query->have_posts() ): 
-		                    	$html .= "<h1>Former Lab Team</h1><div class='row former-members'>";
+		                    	$html .= "<div class='former-team-block'><h1 class='former-title'>Former Lab Team</h1><div class='row former-members'>";
 		                      while ( $the_query->have_posts() ) : $the_query->the_post();
 		                       //DO YOUR THING
 		                        $name = get_the_title();
@@ -460,7 +460,7 @@ function rbd_current_team(){
 		                         endwhile;
 		                  endif;
 		            wp_reset_query();  // Restore global post data stomped by the_post().
-		   return  $html . "</div>";
+		   return  $html . "</div></div>";
 }  
 
 
