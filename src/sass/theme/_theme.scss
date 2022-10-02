@@ -81,6 +81,10 @@ header {
     padding: 100px 3vw;
 }
 
+.cream-row a {
+    color: $navy;
+}
+
 .purple-row h1, .purple-row h2 {
     color: $cream;
 }
@@ -316,7 +320,7 @@ header {
 }
 
 .project-summary {
-    margin: 0 3vw;
+    margin: 0 9vw 0 2vw;
     font-size: 1.4rem;
 }
 
@@ -532,6 +536,22 @@ header {
     padding: 40px;
 }
 
+//single post
+.entry-meta {
+    margin-bottom: 20px;    
+}
+
+.post {
+    padding: 0 40px 50px 0;
+}
+
+
+//sidebar
+.widget h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+
 @media (max-width: 767px) {
     .projects{
         background-image: none;
@@ -577,6 +597,10 @@ header {
     }
     .bio-text {
         padding-right: 0;
+    }
+
+    .project-summary {
+        margin: 0 3vw 0 3vw;
     }
 
 }

@@ -41,7 +41,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								</div>
 							</a>
 						<div class="social">
-							<a href="https://www.linkedin.com/mwlite/company/adaptationlearningnetwork">
+							<a href="https://www.linkedin.com/company/adaptationlearningnetwork/">
 								<div class='circle'>
 									<div class='circle__inner'>
 										<div class='circle__wrapper'>	  			
