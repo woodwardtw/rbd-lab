@@ -190,7 +190,7 @@ function rbd_proj_partner_builder(){
         foreach ($partners as $key => $partner) {
         		$post_id = $partner->ID;
         		$title = $partner->post_name;
-						$link = get_post_permalink($post_id);
+				$link = get_field('partner_link',$post_id);
         	// code...
 						$html .= '<div class="col-md-3 partner-box">' . rbd_circle_maker($title,$link) . '</div>';
         }
@@ -375,92 +375,147 @@ function rbd_wwd_carousel(){
 
 add_image_size( 'bio', '400', '400', array('center','center'));
 
-function rbd_current_team(){
 
-	// WP QUERY LOOP
-	$html = "";
-		 $args = array(
-		      'posts_per_page' => 11,
-		      'post_type'   => 'member', 
-		      'post_status' => 'publish', 
-		      'nopaging' => false,
-		       'tax_query' => array( // (array) - use taxonomy parameters (available with Version 3.1).
-						    array(
-						      'taxonomy' => 'Status', // (string) - Taxonomy.
-						      'field' => 'slug', // (string) - Select taxonomy term by Possible values are 'term_id', 'name', 'slug' or 'term_taxonomy_id'. Default value is 'term_id'.
-						      'terms' => array( 'active' ), // (int/string/array) - Taxonomy term(s).
-						      'operator' => 'IN' // (string) - Operator to test. Possible values are 'IN', 'NOT IN', 'AND', 'EXISTS' and 'NOT EXISTS'. Default value is 'IN'.
-						    ),						   
-						  ),  
-		    );
-		  $the_query = new WP_Query( $args );
-		                    if( $the_query->have_posts() ): 
-		                      while ( $the_query->have_posts() ) : $the_query->the_post();
-		                       //DO YOUR THING
-		                        $name = get_the_title();
-		                        $post_id = get_the_ID();
-		                        $content = get_the_content();
-		                        $img = get_the_post_thumbnail_url($post_id,'bio');
-		                        $html .= "
-		                        <div class='row active-members'>
-		                        			<div class='col-md-4'>
-		                        				<img class='bio-image' src='{$img}' alt='Biography image for {$name}.'>
-		                        			</div>
-		                        			<div class='col-md-8'>
-		                        				<h2 class='bio-title'>{$name}</h2>
-		                        				<div class='bio-text'>{$content}</div>
-		                        			</div>
-		                        </div>
-		                        ";
-		                         endwhile;
-		                  endif;
-		            wp_reset_query();  // Restore global post data stomped by the_post().
-		   return  $html;
-}                    
+function rbd_current_team(){
+	$html = '';
+	$members = get_field('current_members');
+	if($members) {
+		foreach($members as $member){
+			$post_id = $member->ID;
+			$name = $member->post_title;
+            $position = get_field('title', $post_id);
+            $content = $member->post_content;
+            $img = get_the_post_thumbnail_url($post_id,'bio');
+            $html .= "
+            <div class='row active-members'>
+            			<div class='col-md-4'>
+            				<img class='bio-image' src='{$img}' alt='Biography image for {$name}.'>
+            			</div>
+            			<div class='col-md-8'>
+            				<h2 class='bio-title'>{$name}</h2>
+            				<div class='position'>{$position}</div>
+            				<div class='bio-text'>{$content}</div>
+            			</div>
+            </div>
+            ";             
+		}
+	}
+	return $html;
+
+}
+
+//deprecated with move to control order rather than sort by date***************
+// function rbd_current_team(){
+
+// 	// WP QUERY LOOP
+// 	$html = "";
+// 		 $args = array(
+// 		      'posts_per_page' => 11,
+// 		      'post_type'   => 'member', 
+// 		      'post_status' => 'publish', 
+// 		      'nopaging' => false,
+// 		       'tax_query' => array( // (array) - use taxonomy parameters (available with Version 3.1).
+// 						    array(
+// 						      'taxonomy' => 'Status', // (string) - Taxonomy.
+// 						      'field' => 'slug', // (string) - Select taxonomy term by Possible values are 'term_id', 'name', 'slug' or 'term_taxonomy_id'. Default value is 'term_id'.
+// 						      'terms' => array( 'active' ), // (int/string/array) - Taxonomy term(s).
+// 						      'operator' => 'IN' // (string) - Operator to test. Possible values are 'IN', 'NOT IN', 'AND', 'EXISTS' and 'NOT EXISTS'. Default value is 'IN'.
+// 						    ),						   
+// 						  ),  
+// 		    );
+// 		  $the_query = new WP_Query( $args );
+// 		                    if( $the_query->have_posts() ): 
+// 		                      while ( $the_query->have_posts() ) : $the_query->the_post();
+// 		                       //DO YOUR THING
+// 		                        $name = get_the_title();
+// 		                        $post_id = get_the_ID();
+// 		                        $content = get_the_content();
+// 		                        $img = get_the_post_thumbnail_url($post_id,'bio');
+// 		                        $html .= "
+// 		                        <div class='row active-members'>
+// 		                        			<div class='col-md-4'>
+// 		                        				<img class='bio-image' src='{$img}' alt='Biography image for {$name}.'>
+// 		                        			</div>
+// 		                        			<div class='col-md-8'>
+// 		                        				<h2 class='bio-title'>{$name}</h2>
+// 		                        				<div class='bio-text'>{$content}</div>
+// 		                        			</div>
+// 		                        </div>
+// 		                        ";
+// 		                         endwhile;
+// 		                  endif;
+// 		            wp_reset_query();  // Restore global post data stomped by the_post().
+// 		   return  $html;
+// }                    
+
+function rbd_former_team(){
+	$html = "<div class='former-team-block'><h1 class='former-title'>Former Lab Team</h1><div class='row former-members'>";
+	$members = get_field('former_members');
+	if($members) {
+		foreach($members as $member){
+			$post_id = $member->ID;
+			$name = $member->post_title;
+            $position = get_field('title', $post_id);
+            $content = $member->post_content;
+            $img = get_the_post_thumbnail_url($post_id,'bio');
+            $html .= "
+            <div class='col-md-3'>
+    			<div class='former-block'>
+        				<img class='bio-image' src='{$img}' alt='Biography image for {$name}.'>
+        				<h2 class='bio-title-former'>{$name}</h2>
+        				<div class='position'>{$position}</div>
+        			</div>
+    			</div>
+            ";             
+		}
+	}
+	return $html . "</div></div>";
+
+}
 	
 
-	function rbd_former_team(){
+// 	function rbd_former_team(){
 
-	// WP QUERY LOOP
-	$html = "";
-		 $args = array(
-		      'posts_per_page' => 11,
-		      'post_type'   => 'member', 
-		      'post_status' => 'publish', 
-		      'nopaging' => false,
-		       'tax_query' => array( // (array) - use taxonomy parameters (available with Version 3.1).
-						    array(
-						      'taxonomy' => 'Status', // (string) - Taxonomy.
-						      'field' => 'slug', // (string) - Select taxonomy term by Possible values are 'term_id', 'name', 'slug' or 'term_taxonomy_id'. Default value is 'term_id'.
-						      'terms' => array( 'former' ), // (int/string/array) - Taxonomy term(s).
-						      'operator' => 'IN' // (string) - Operator to test. Possible values are 'IN', 'NOT IN', 'AND', 'EXISTS' and 'NOT EXISTS'. Default value is 'IN'.
-						    ),						   
-						  ),  
-		    );
-		  $the_query = new WP_Query( $args );
-		                    if( $the_query->have_posts() ): 
-		                    	$html .= "<div class='former-team-block'><h1 class='former-title'>Former Lab Team</h1><div class='row former-members'>";
-		                      while ( $the_query->have_posts() ) : $the_query->the_post();
-		                       //DO YOUR THING
-		                        $name = get_the_title();
-		                        $post_id = get_the_ID();
-		                        $content = get_the_content();
-		                        $img = get_the_post_thumbnail_url($post_id,'bio');
-		                        $html .= "
+// 	// WP QUERY LOOP
+// 	$html = "";
+// 		 $args = array(
+// 		      'posts_per_page' => 11,
+// 		      'post_type'   => 'member', 
+// 		      'post_status' => 'publish', 
+// 		      'nopaging' => false,
+// 		       'tax_query' => array( // (array) - use taxonomy parameters (available with Version 3.1).
+// 						    array(
+// 						      'taxonomy' => 'Status', // (string) - Taxonomy.
+// 						      'field' => 'slug', // (string) - Select taxonomy term by Possible values are 'term_id', 'name', 'slug' or 'term_taxonomy_id'. Default value is 'term_id'.
+// 						      'terms' => array( 'former' ), // (int/string/array) - Taxonomy term(s).
+// 						      'operator' => 'IN' // (string) - Operator to test. Possible values are 'IN', 'NOT IN', 'AND', 'EXISTS' and 'NOT EXISTS'. Default value is 'IN'.
+// 						    ),						   
+// 						  ),  
+// 		    );
+// 		  $the_query = new WP_Query( $args );
+// 		                    if( $the_query->have_posts() ): 
+// 		                    	$html .= "<div class='former-team-block'><h1 class='former-title'>Former Lab Team</h1><div class='row former-members'>";
+// 		                      while ( $the_query->have_posts() ) : $the_query->the_post();
+// 		                       //DO YOUR THING
+// 		                        $name = get_the_title();
+// 		                        $post_id = get_the_ID();
+// 		                        $content = get_the_content();
+// 		                        $img = get_the_post_thumbnail_url($post_id,'bio');
+// 		                        $html .= "
 		                        
-		                        			<div class='col-md-3'>
-		                        			<div class='former-block'>
-			                        				<img class='bio-image' src='{$img}' alt='Biography image for {$name}.'>
-			                        				<h2 class='bio-title-former'>{$name}</h2>
-			                        			</div>
-		                        			</div>
+// 		                        			<div class='col-md-3'>
+// 		                        			<div class='former-block'>
+// 			                        				<img class='bio-image' src='{$img}' alt='Biography image for {$name}.'>
+// 			                        				<h2 class='bio-title-former'>{$name}</h2>
+// 			                        			</div>
+// 		                        			</div>
 		          
-		                        ";
-		                         endwhile;
-		                  endif;
-		            wp_reset_query();  // Restore global post data stomped by the_post().
-		   return  $html . "</div></div>";
-}  
+// 		                        ";
+// 		                         endwhile;
+// 		                  endif;
+// 		            wp_reset_query();  // Restore global post data stomped by the_post().
+// 		   return  $html . "</div></div>";
+// }  
 
 
 //allow svg**doesn't seem to work

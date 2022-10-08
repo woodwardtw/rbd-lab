@@ -16563,6 +16563,13 @@ header {
   border-radius: 50%;
 }
 
+.position {
+  font-size: 1.4rem;
+  font-weight: 100;
+  margin-bottom: 20px;
+  color: #154260;
+}
+
 .bio-title-former {
   margin-top: 20px;
 }

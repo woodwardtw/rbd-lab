@@ -18,6 +18,58 @@
             "message": "Members are added\/removed here by managing the Member post type. You can see it in the sidebar. Active and Former are set at the member level and let you move people between sections.",
             "new_lines": "wpautop",
             "esc_html": 0
+        },
+        {
+            "key": "field_63415fe9800e0",
+            "label": "Current members",
+            "name": "current_members",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "member"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        },
+        {
+            "key": "field_63416016800e1",
+            "label": "Former members",
+            "name": "former_members",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "member"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
         }
     ],
     "location": [
@@ -50,5 +102,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664714728
+    "modified": 1665229913
 }
